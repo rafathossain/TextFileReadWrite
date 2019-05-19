@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Text File Read/Write</string>
+    <string name="text_file_read_write">Text File Read/Write</string>
+    <string name="add_item_to_the_list">Add item to the list</string>
+    <string name="todo">TODO</string>
+    <string name="type_clear_to_clear_the_text_file">Type CLEAR to clear the text file</string>
+    <string name="send">Send</string>
+</resources>

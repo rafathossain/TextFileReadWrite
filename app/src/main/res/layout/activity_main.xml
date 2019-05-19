@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:text="@string/text_file_read_write"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:text="@string/type_clear_to_clear_the_text_file"
+        android:gravity="center"
+        android:layout_below="@+id/header"
+        android:padding="5dp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="sans-serif-black"/>
+
+    <ListView
+        android:layout_below="@+id/instruction"
+        android:layout_above="@id/input"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
+        <EditText
+            android:id="@+id/itemAdder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_item_to_the_list"
+            android:fontFamily="sans-serif-light"
+            android:textSize="14sp"
+            android:layout_toLeftOf="@id/sendBtn"
+            android:layout_toStartOf="@+id/sendBtn"
+            android:layout_alignParentBottom="true"
+            android:inputType="text"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:text="@string/send"
+            android:background="@color/GREEN600"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+</RelativeLayout>
