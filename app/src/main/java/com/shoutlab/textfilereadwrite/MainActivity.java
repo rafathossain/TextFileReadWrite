@@ -53,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setAdapter(arrayAdapter);
 
-        getData();
-
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
         // If request is cancelled, the result arrays are empty.
         if (requestCode == 1) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                getData();
+
                 Toast.makeText(MainActivity.this, "Voila! You are good to go.", Toast.LENGTH_SHORT).show();
                 // permission was granted, yay! Do the
                 // contacts-related task you need to do.

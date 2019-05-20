@@ -25,6 +25,12 @@ class TextManager {
         String line = null;
 
         try {
+            new File(path).mkdir();
+            File file = new File(path+ fileName);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
             FileInputStream fileInputStream = new FileInputStream (new File(path + fileName));
             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
